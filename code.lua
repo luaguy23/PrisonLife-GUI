@@ -489,8 +489,8 @@ local function YYVQ_fake_script() -- TopBar.LocalScript
 	end)
 	
 	speed.reset.MouseButton1Click:Connect(function()
-		speed.Jump.Text = "50"
-		speed.Speed.Text = "16"
+		ply.Character.Humanoid.JumpPower = "50"
+		ply.Character.Humanoid.WalkSpeed = "16"
 	end)
 	
 	X.MouseButton1Click:Connect(function()

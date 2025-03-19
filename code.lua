@@ -411,7 +411,6 @@ local function YYVQ_fake_script() -- TopBar.LocalScript
 	local loop = false
 	local ply = game.Players.LocalPlayer
 	
-	
 	local function Switch(button)
 		local target = buttons:FindFirstChild(button)
 		for i,v in pairs(buttons:GetChildren()) do
@@ -419,7 +418,6 @@ local function YYVQ_fake_script() -- TopBar.LocalScript
 		end
 		target.Visible = true
 	end
-	
 	local function Teleport(pos)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(pos)
 	end
@@ -429,11 +427,9 @@ local function YYVQ_fake_script() -- TopBar.LocalScript
 	side.speed.MouseButton1Click:Connect(function()
 		Switch("speed")
 	end)
-	
 	side.tpplayer.MouseButton1Click:Connect(function()
 		Switch("playertp")
 	end)
-	
 	side.teleport.MouseButton1Click:Connect(function()
 		Switch("teleport")
 	end)
@@ -443,7 +439,7 @@ local function YYVQ_fake_script() -- TopBar.LocalScript
 	tpplayer.teleport.MouseButton1Click:Connect(function()
 		local ply = game.Players.LocalPlayer
 		local target = tpplayer.TextBox.Text
-		
+
 		ply.Character.HumanoidRootPart.CFrame = workspace[target].HumanoidRootPart.CFrame * CFrame.new(tpplayer.Xc.Text,tpplayer.Yc.Text,tpplayer.Zc.Text)
 	end)
 	
@@ -468,19 +464,16 @@ local function YYVQ_fake_script() -- TopBar.LocalScript
 	teleport.Car.MouseButton1Click:Connect(function()
 		Teleport(Vector3.new(-191.331558, 53.8461494, 1892.37158, 0.999902546, 2.38414906, 0.0139622176, -2.49733318, 1, 8.08902456, -0.0139622176, -8.12310432, 0.999902546))
 	end)
-	
 	teleport.Base.MouseButton1Click:Connect(function()
 		Teleport(Vector3.new(-975.896118, 109.323784, 2061.90405, 0, 0, -1, 0, 1, 0, 1, 0, 0))
 	end)
-	
 	teleport.Cells.MouseButton1Click:Connect(function()
 		Teleport(Vector3.new(916.813538, 99.9899826, 2484.00073, 0.999987423, 2.24394636, 0.00500971219, -2.27554011, 1, 6.30080024, -0.00500971219, -6.3121206, 0.999987423))
 	end)
-	
 	teleport.Police.MouseButton1Click:Connect(function()
 		Teleport(Vector3.new(836.273071, 99.9899979, 2284.32959, 0.9999668, -1.14353584, 0.00814866088, 1.16497372, 1, -2.62609809, -0.00814866088, 2.6355039, 0.9999668))
 	end)
-	
+
 	-----------------------------------------------------
 	
 	speed.apply.MouseButton1Click:Connect(function()
